@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="Author" content="">
+    <meta name="Author" content="contactolaserlocksystems@gmail.com">
     <title>LaserLock</title>
     <link rel="icon" href="static/images/logo.ico">
     <link rel="stylesheet" href="static/css/style.css">
@@ -25,47 +25,53 @@
 
     <nav>
         <div class="nav-links">
-            <a href="">Inicio</a>
-            <a href="">Nosotros</a>
-            <a href="">Distribuidores</a>
-            <a href="">Contacto</a>
-            <a href="">Configurar</a>
+            <a href="#">Inicio</a>
+            <a href="#">Nosotros</a>
+            <a href="#">Distribuidores</a>
+            <a href="#">Contacto</a>
+            <a href="#">Configurar</a>
         </div>
     </nav>
 
 
+        <div class="container">
+            <div class="row-1">
+                <div class="inicio">
 
-    <div class="container">
-        <div class="row-1">
-            <div class="inicio">
+                    <!-- Contenedor de imagen + puntitos -->
+                    <div class="img-wrapper">
+                        <img id="slider-img" src="static/images/family1.jpg" alt="Servidor no disponible">
+                        <div class="dots"></div>
+                    </div>
 
-                <!-- Contenedor de imagen + puntitos -->
-                <div class="img-wrapper">
-                    <img id="slider-img" src="static/images/family1.jpg" alt="Servidor no disponible">
-                    <div class="dots"></div>
+                    <div class="card">
+                        <div class="card-content">
+                            <h2>¡Bienvenido a LaserLock!</h2>
+                            <p>En un mundo donde la seguridad es prioridad, proteger hogares y pequeños negocios no
+                                debería ser complicado ni costoso. Nuestro innovador sistema de alarma combina
+                                tecnología láser y espejos diminutos para detectar intrusos de manera precisa y
+                                eficiente. Cada interrupción del haz de luz activa la alerta, creando una barrera de
+                                seguridad confiable. A diferencia de los sistemas tradicionales, este prototipo ofrece
+                                bajo costo, instalación sencilla y consumo mínimo de energía, llevando la protección de
+                                alta tecnología al alcance de todos.</p>
+                        </div>
+                    </div>
+
                 </div>
-
-                <div class="card">
-                    <div class="card-content">
-                        <h2>¡Bienvenido a LaserLock!</h2>
-                        <p>En un mundo donde la seguridad es prioridad, proteger hogares y pequeños negocios no debería ser complicado ni costoso. Nuestro innovador sistema de alarma combina tecnología láser y espejos diminutos para detectar intrusos de manera precisa y eficiente. Cada interrupción del haz de luz activa la alerta, creando una barrera de seguridad confiable. A diferencia de los sistemas tradicionales, este prototipo ofrece bajo costo, instalación sencilla y consumo mínimo de energía, llevando la protección de alta tecnología al alcance de todos.</p>
+            </div>
+            <div class="row">
+                <div class="simulacion-container">
+                    <div class="controles">
+                        <p>Conteo de detecciones: <span id="contador">0</span></p>
+                        <button id="toggleSimulacion">Iniciar Simulación</button>
+                    </div>
+                    <div class="simulacion">
+                        <div class="laser"></div>
                     </div>
                 </div>
+            </div>
+        </div>
 
-            </div>
-        </div>
-        <div class="row">
-            <div class="simulacion-container">
-                <div class="controles">
-                    <p>Conteo de detecciones: <span id="contador">0</span></p>
-                    <button id="toggleSimulacion">Iniciar Simulación</button>
-                </div>
-                <div class="simulacion">
-                    <div class="laser"></div>
-                </div>
-            </div>
-        </div>
-    </div>
 
     <script src="static/js/laser.js"></script>
     <script src="static/js/slider.js"></script>
