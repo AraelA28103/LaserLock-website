@@ -1,0 +1,58 @@
+/* Reset estilos CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    padding: 20px;
+    background-color: #000;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+}
+
+.title {
+    display: flex;
+    align-items: center;
+}
+
+.user {
+    display: flex;
+    align-items: center;
+}
+
+.user img {
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+    margin-left: 20px;
+}
+
+nav {
+    background-color: #636363;
+    margin: 0 auto;
+    padding: 20px;
+    margin-left: 40px;
+    margin-right: 40px;
+}
+
+.nav-links {
+    display: flex;
+    justify-content: space-between;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.container {
+    margin-top: 20px;
+    margin-left: 40px;
+    margin-right: 40px;
+    border: 2px solid #000;
+    border-radius: 5px;
+    height: 500px;
+}
