@@ -1,15 +1,28 @@
 let contador = 0;
 let activado = false;
 
-document.getElementById("activarBtn").addEventListener("click", () => {
+const activarBtn = document.getElementById("activarBtn");
+const contadorSpan = document.getElementById("contador");
+const laser = document.getElementById("laser");
+
+activarBtn.addEventListener("click", () => {
     activado = !activado;
-    document.getElementById("activarBtn").innerText = activado ? "Desactivar" : "Activar";
+    activarBtn.innerText = activado ? "Desactivar" : "Activar";
+
+    // Cambiar clase de color
+    if (activado) {
+        activarBtn.classList.remove("btn-success");
+        activarBtn.classList.add("btn-danger");
+    } else {
+        activarBtn.classList.remove("btn-danger");
+        activarBtn.classList.add("btn-success");
+    }
 });
 
-document.getElementById("laser").addEventListener("mouseenter", () => {
+laser.addEventListener("mouseenter", () => {
     if (activado) {
         contador++;
-        document.getElementById("contador").innerText = contador;
+        contadorSpan.innerText = contador;
         alert("¡Alarma activada!");
     }
 });
