@@ -1,0 +1,101 @@
+/* Compensar la altura del navbar fijo */
+body {
+    padding-top: 100px;
+    /* ajusta este valor según la altura real del nav */
+}
+
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+.navbar {
+    transition: background 0.5s ease;
+}
+
+.navbar.scrolled {
+    background: rgba(0, 0, 0, 0.85) !important;
+}
+
+.simulador {
+    position: relative;
+    width: 100%;
+    height: 200px;
+    background: black;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.laser {
+    position: absolute;
+    left: 50%;
+    top: 0;
+    width: 5px;
+    height: 100%;
+    background: red;
+    transform: translateX(-50%);
+}
+
+/* Estilo general de enlaces */
+.navbar .nav-link {
+    position: relative;
+    color: white;
+    transition: color 0.3s ease;
+}
+
+/* Línea roja al pasar el mouse */
+.navbar .nav-link::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0%;
+    height: 2px;
+    background: red;
+    transition: width 0.3s ease;
+}
+
+/* Animación al hover */
+.navbar .nav-link:hover::after {
+    width: 100%;
+}
+
+/* Ajustes de separación */
+.navbar .navbar-brand {
+    font-size: 1.4rem;
+}
+
+.navbar form input {
+    max-width: 200px;
+}
+
+/* Estilo de enlaces */
+.navbar .nav-link {
+    position: relative;
+    color: white;
+    margin: 0 10px;
+}
+
+.navbar .nav-link::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -3px;
+    width: 0%;
+    height: 2px;
+    background: red;
+    transition: width 0.3s ease;
+}
+
+.navbar .nav-link:hover::after,
+.navbar .nav-link.active::after {
+    width: 100%;
+}
+
+#map {
+  border: 2px solid #dc3545;
+}
+
+#perfilDist {
+  min-height: 200px;
+}
