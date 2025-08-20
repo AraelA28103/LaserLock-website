@@ -3,14 +3,6 @@ body {
     padding-top: 100px;
 }
 
-.navbar {
-    transition: background 0.5s ease;
-}
-
-.navbar.scrolled {
-    background: rgba(0, 0, 0, 0.85) !important;
-}
-
 .simulador {
     position: relative;
     width: 100%;
