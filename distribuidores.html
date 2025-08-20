@@ -14,27 +14,39 @@
 
 <body>
     <!-- NAVBAR -->
-    <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
-        <div class="container-fluid flex-column">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top shadow">
+        <div class="container-fluid">
 
-            <!-- PRIMERA FILA: LOGO + BUSCADOR + ICONO PERFIL -->
-            <div class="d-flex justify-content-between align-items-center w-100">
-                <a class="navbar-brand fw-bold" href="index.html">LaserLock</a>
+            <!-- LOGO -->
+            <a class="navbar-brand fw-bold" href="index.html">
+                <img src="static/images/logo.ico" alt="" width="40"> LaserLock
+            </a>
 
-                <!-- SEGUNDA FILA: MENÚ DE ENLACES -->
+            <!-- BOTÓN HAMBURGUESA -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
 
+            <!-- MENÚ -->
+            <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav mx-auto">
-                    <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
-                    <li class="nav-item"><a class="nav-link" href="https://araela28103.github.io/LaserLock-info/">Nosotros</a></li>
-                    <li class="nav-item"><a class="nav-link active" href="distribuidores.html">Distribuidores</a></li>
-                    <li class="nav-item"><a class="nav-link" href="contacto.html">Contacto</a></li>
-                    <li class="nav-item"><a class="nav-link" href="configuracion.html">Configuración</a></li>
+                    <li class="nav-item"><a class="nav-link" href="index.html"><i class="bi bi-house"></i>
+                            Inicio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="https://araela28103.github.io/LaserLock-info/"><i
+                                class="bi bi-people"></i> Nosotros</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="distribuidores.html"><i class="bi bi-bag"></i>
+                            Distribuidores</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contacto.html"><i class="bi bi-phone"></i>
+                            Contacto</a></li>
+                    <li class="nav-item"><a class="nav-link" href="configuracion.html"><i class="bi bi-gear"></i>
+                            Configuración</a></li>
                 </ul>
-                <a href="#" class="text-white">
+
+                <!-- ICONO PERFIL -->
+                <a href="#" class="text-white ms-3">
                     <i class="bi bi-person-circle fs-4"></i>
                 </a>
             </div>
-
         </div>
     </nav>
 
