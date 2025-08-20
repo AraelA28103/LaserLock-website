@@ -1,14 +1,6 @@
-/* Compensar la altura del navbar fijo */
-body {
-
-    padding-top: 100px;
-    /* ajusta este valor según la altura real del nav */
-}
-
-
 body {
     font-family: Arial, sans-serif;
-
+    padding-top: 100px;
 }
 
 .navbar {

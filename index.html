@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>LaserLock - Inicio</title>
+    <link rel="icon" href="images/logo.ico">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="static/css/style.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
@@ -12,44 +13,57 @@
 
 <body>
     <!-- NAVBAR -->
-    <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
-        <div class="container-fluid flex-column">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top shadow">
+        <div class="container-fluid">
 
-            <!-- PRIMERA FILA: LOGO + BUSCADOR + ICONO PERFIL -->
-            <div class="d-flex justify-content-between align-items-center w-100">
-                <a class="navbar-brand fw-bold" href="index.html">LaserLock</a>
+            <!-- LOGO -->
+            <a class="navbar-brand fw-bold" href="index.html">
+                <img src="static/images/logo.ico" alt="" width="80"><img src="images/logo.ico" alt="" width="80px">
+                LaserLock
+            </a>
 
-                <!-- SEGUNDA FILA: MENÚ DE ENLACES -->
+            <!-- BOTÓN HAMBURGUESA -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
 
+            <!-- MENÚ -->
+            <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav mx-auto">
-                    <li class="nav-item"><a class="nav-link active" href="index.html">Inicio</a></li>
-                    <li class="nav-item"><a class="nav-link" href="https://araela28103.github.io/LaserLock-info/">Nosotros</a></li>
-                    <li class="nav-item"><a class="nav-link" href="distribuidores.html">Distribuidores</a></li>
-                    <li class="nav-item"><a class="nav-link" href="contacto.html">Contacto</a></li>
-                    <li class="nav-item"><a class="nav-link" href="configuracion.html">Configuración</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="index.html"><i class="bi bi-house"></i>
+                            Inicio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="https://araela28103.github.io/LaserLock-info/"><i
+                                class="bi bi-people"></i> Nosotros</a></li>
+                    <li class="nav-item"><a class="nav-link" href="distribuidores.html"><i class="bi bi-bag"></i>
+                            Distribuidores</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contacto.html"><i class="bi bi-phone"></i>
+                            Contacto</a></li>
+                    <li class="nav-item"><a class="nav-link" href="configuracion.html"><i class="bi bi-gear"></i>
+                            Configuración</a></li>
                 </ul>
-                <a href="#" class="text-white">
+
+                <!-- ICONO PERFIL -->
+                <a href="#" class="text-white ms-3">
                     <i class="bi bi-person-circle fs-4"></i>
                 </a>
             </div>
-
         </div>
     </nav>
 
 
     <!-- CONTENIDO PRINCIPAL -->
-    <section class="container mt-5 pt-4 border border-dark border-opacity-50 rounded pb-4">
+    <section class="container mt-5 pt-4 border border-dark border-opacity-50 rounded pb-4 light">
         <div class="row">
             <div id="carouselExample" class="carousel slide col-md-7">
                 <div class="carousel-inner">
                     <div class="carousel-item active">
-                        <img src="static/images/family1.jpg" class="d-block" alt="..." style="width: 730px;">
+                        <img src="images/family1.jpg" class="d-block" alt="..." style="width: 730px;">
                     </div>
                     <div class="carousel-item">
-                        <img src="static/images/family2.jpg" class="d-block" alt="..." style="width: 730px;">
+                        <img src="images/family2.jpg" class="d-block" alt="..." style="width: 730px;">
                     </div>
                     <div class="carousel-item">
-                        <img src="static/images/family3.jpg" class="d-block" alt="..." style="width: 730px;">
+                        <img src="images/family3.jpg" class="d-block" alt="..." style="width: 730px;">
                     </div>
                 </div>
                 <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample"
@@ -64,16 +78,22 @@
                 </button>
             </div>
             <div class="col-md-5">
-                <h3 class="fw-bold text-center">Protección para tu hogar</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
-                    dignissim, nunc in cursus tincidunt, turpis orci fermentum magna,
-                    vitae volutpat lorem velit eget orci.</p>
+                <h3 class="fw-bold text-center">🚨 ¡Seguridad láser que parece MAGIA! 🚨</h3>
+                <p class="text-center pt-4">
+
+                    Transforma tu hogar o negocio con el sistema que crea un escudo invisible de luz . Controla todo
+                    desde tu celular: monitorea en tiempo real ⏱️, configura zonas prohibidas y recibe alertas al
+                    instante .
+
+                    Instalación en minutos Sin cables Ahorro de energía
+
+                    👉 ¡Protege lo que más amas con tecnología del FUTURO! 👈</p>
             </div>
         </div>
     </section>
 
     <!-- SIMULADOR -->
-    <section class="container my-5">
+    <section class="container my-5 border border-dark border-opacity-50 rounded pt-4 pb-4">
         <h4 class="fw-bold">Prueba la simulación</h4>
         <button class="btn btn-success my-2" id="activarBtn">Activar</button>
         <p><span id="contador">0</span> movimientos detectados</p>
