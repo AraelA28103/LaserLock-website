@@ -53,14 +53,27 @@
     <main class="">
         <section class="container mt-5 b-black border border-dark rounded border-opacity-50 p-5">
             <h3 class="text-danger">¡No dudes en contactarnos!</h3>
-            <form>
+            <form action="https://formspree.io/f/xanbglnv" method="POST">
                 <div class="row">
-                    <div class="col-md-6 mb-2"><input type="text" class="form-control" placeholder="Nombre"></div>
-                    <div class="col-md-6 mb-2"><input type="email" class="form-control" placeholder="Correo"></div>
+                    <div class="col-md-6 mb-2">
+                        <input type="text" class="form-control" name="nombre" placeholder="Nombre" required>
+                    </div>
+                    <div class="col-md-6 mb-2">
+                        <input type="email" class="form-control" name="email" placeholder="Correo" required>
+                    </div>
                 </div>
-                <div class="mb-2"><textarea class="form-control" rows="3" placeholder="Mensaje"></textarea></div>
+                <div class="mb-2">
+                    <textarea class="form-control" name="mensaje" rows="3" placeholder="Mensaje" required></textarea>
+                </div>
+
+                <!-- Campo oculto para auto-reply -->
+                <input type="hidden" name="_autoresponse"
+                    value="✅ Gracias por contactarnos, estaremos en contacto con usted.">
+
                 <button type="submit" class="btn btn-primary">Enviar</button>
             </form>
+
+
         </section>
     </main>
 
