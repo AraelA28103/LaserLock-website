@@ -17,27 +17,29 @@ document.getElementById("loginForm").addEventListener("submit", function (e) {
     }
 });
 
-// ejemplo de login.js
-document.getElementById("loginForm").addEventListener("submit", (e) => {
+// LOGIN unificado (usa el mismo storage que el registro)
+document.getElementById('loginForm')?.addEventListener('submit', (e) => {
     e.preventDefault();
 
-    const username = document.getElementById("username").value;
-    const password = document.getElementById("password").value;
+    const correo = document.getElementById('correo').value.trim().toLowerCase();
+    const password = document.getElementById('password').value;
 
-    // Buscar usuario guardado en localStorage
-    const users = JSON.parse(localStorage.getItem("users")) || [];
-    const user = users.find(u => u.username === username && u.password === password);
+    const usuarios = JSON.parse(localStorage.getItem('usuarios') || '[]');
+    const usuario = usuarios.find(u => String(u.correo).toLowerCase() === correo && u.password === password);
 
-    if (user) {
-        // Guardar usuario actual
-        localStorage.setItem("currentUser", JSON.stringify(user));
+    if (usuario) {
+        localStorage.setItem('usuarioActual', JSON.stringify(usuario));
+        // Llaves que usa el nav para pintar el nombre
+        localStorage.setItem('user_name', usuario.nombre);
+        localStorage.setItem('user', JSON.stringify({ name: usuario.nombre, correo: usuario.correo }));
 
-        // Redirigir al index para actualizar el nav
-        window.location.href = "index.html";
+        alert('Bienvenido ' + usuario.nombre);
+        window.location.href = 'index.html';
     } else {
-        alert("Usuario o contraseña incorrectos");
+        alert('Correo o contraseña incorrectos.');
     }
 });
+
 
 document.addEventListener("DOMContentLoaded", () => {
     const profileLink = document.getElementById("profile-link");

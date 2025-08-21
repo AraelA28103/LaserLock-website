@@ -43,9 +43,11 @@
                     <li class="nav-item"><a class="nav-link" href="configuracion.html"><i class="bi bi-gear"></i>
                             Configuración</a></li>
                 </ul>
-                <a href="#" class="text-white ms-5 me-3">
+                <a id="profile-link" href="configuracion.html" class="text-white ms-5 me-3 d-flex align-items-center">
                     <i class="bi bi-person-circle fs-4"></i>
+                    <span id="profile-name" class="ms-2 d-none d-md-inline"></span>
                 </a>
+
             </div>
 
         </div>
@@ -150,6 +152,8 @@
             cargarComentarios(1);
         });
     </script>
+    <script src="static/js/user-name.js" defer></script>
+
 
 </body>
 
