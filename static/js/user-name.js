@@ -1,50 +1,31 @@
 // static/js/user-name.js
 (() => {
-    // elementos (puede haber más de un nav por página)
-    const nameEls = Array.from(document.querySelectorAll('#profile-name'));
-    const linkEls = Array.from(document.querySelectorAll('#profile-link'));
-    if (!nameEls.length || !linkEls.length) return;
+    const nameEl = document.getElementById('profile-name');
+    const linkEl = document.getElementById('profile-link');
+    if (!nameEl || !linkEl) return;
 
-    // lee nombre desde localStorage (varias llaves soportadas)
+    let current = null;
+    try { current = JSON.parse(localStorage.getItem('usuarioActual') || 'null'); } catch { }
+
     const getName = () => {
-        const keys = ['ll_user_name', 'user_name', 'usuario_nombre', 'nombre_usuario'];
-        for (const k of keys) {
-            const v = localStorage.getItem(k);
-            if (v && v.trim()) return v.trim();
-        }
-        const jsonKeys = ['ll_user', 'user', 'usuario'];
-        for (const k of jsonKeys) {
-            const raw = localStorage.getItem(k);
-            if (!raw) continue;
-            try {
-                const o = JSON.parse(raw);
-                const cands = [o?.name, o?.nombre, o?.displayName];
-                for (const c of cands) if (c && String(c).trim()) return String(c).trim();
-            } catch { }
-        }
-        return null;
+        if (current?.nombre) return String(current.nombre);
+        const n1 = localStorage.getItem('user_name');
+        if (n1) return n1;
+        try {
+            const obj = JSON.parse(localStorage.getItem('user') || 'null');
+            return obj?.name ? String(obj.name) : '';
+        } catch { return ''; }
     };
 
-    const sanitize = (t) => {
-        const div = document.createElement('div');
-        div.textContent = t || '';
-        return div.innerHTML;
-    };
+    const name = (getName() || '').trim();
 
-    const name = getName();
-
-    nameEls.forEach((nameEl, i) => {
-        const linkEl = linkEls[i] || linkEls[0];
-        if (!linkEl) return;
-
-        if (name) {
-            nameEl.innerHTML = sanitize(name);
-            linkEl.href = 'configuracion.html';
-            linkEl.title = name;
-        } else {
-            nameEl.textContent = 'Registrarse';
-            linkEl.href = 'configuracion.html';
-            linkEl.title = 'Configurar cuenta / registro';
-        }
-    });
+    if (name) {
+        nameEl.textContent = name;
+        linkEl.setAttribute('href', 'perfil.html');   // <-- perfil si hay sesión
+        linkEl.title = name;
+    } else {
+        nameEl.textContent = '';
+        linkEl.setAttribute('href', 'register.html'); // <-- registro si NO hay sesión
+        linkEl.title = 'Registrarse';
+    }
 })();
