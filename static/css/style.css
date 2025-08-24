@@ -1,6 +1,6 @@
 body {
     font-family: Arial, sans-serif;
-    padding-top: 100px;
+    padding-top: 00px;
 }
 
 .simulador {
@@ -106,4 +106,366 @@ main {
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
+}
+
+/* NAVBAR */
+.navbar {
+    background-color: #222;
+}
+
+.navbar-brand {
+    font-weight: bold;
+    color: white !important;
+}
+
+.navbar-nav .nav-link {
+    color: white !important;
+    position: relative;
+}
+
+/* Línea roja animada */
+.navbar-nav .nav-link::after {
+    content: "";
+    display: block;
+    width: 0;
+    height: 3px;
+    background: red;
+    transition: width 0.3s;
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+}
+
+.navbar-nav .nav-link:hover::after {
+    width: 100%;
+}
+
+.active-link::after {
+    width: 100%;
+}
+
+/* BOTONES */
+.btn-red {
+    background-color: red;
+    color: white;
+    font-weight: bold;
+}
+
+.btn-red:hover {
+    background-color: darkred;
+}
+
+.btn-outline-dark {
+    border: 2px solid black;
+    font-weight: bold;
+}
+
+/* BENEFICIOS */
+.benefits {
+    background: #222;
+    color: white;
+    padding: 20px;
+}
+
+.benefits i {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+/* --- NAVBAR --- */
+.custom-nav {
+    background-color: #222;
+    padding: 0.5rem 0;
+}
+
+.navbar-brand {
+    color: white !important;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.navbar-nav .nav-link {
+    color: white !important;
+    position: relative;
+    margin: 0 10px;
+    font-weight: 500;
+}
+
+/* Línea roja */
+.navbar-nav .nav-link::after {
+    content: "";
+    display: block;
+    width: 0;
+    height: 3px;
+    background: red;
+    transition: width 0.3s;
+    margin: 0 auto;
+}
+
+.navbar-nav .nav-link:hover::after {
+    width: 100%;
+}
+
+.active-link::after {
+    width: 100%;
+}
+
+/* --- CARRUSEL --- */
+.carousel-inner {
+    text-align: center;
+}
+
+.carousel-inner h3,
+.carousel-inner p {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+/* --- BENEFICIOS --- */
+.benefits {
+    background: #222;
+    color: white;
+    text-align: center;
+}
+
+.benefits div {
+    margin-top: 10px;
+}
+
+.benefits i {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+/* --- DESCRIPCIÓN --- */
+@media (max-width: 768px) {
+    .container .row {
+        text-align: center;
+    }
+
+    .container .row img {
+        margin-top: 20px;
+    }
+}
+
+/* NAVBAR */
+.custom-nav {
+    background-color: #222;
+    /* Fondo oscuro */
+    padding: 0.5rem 0;
+}
+
+.navbar-brand {
+    color: white !important;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.navbar-nav .nav-link {
+    color: white !important;
+    position: relative;
+    margin: 0 10px;
+    font-weight: 500;
+}
+
+/* Línea roja debajo al hacer hover */
+.navbar-nav .nav-link::after {
+    content: "";
+    display: block;
+    width: 0;
+    height: 3px;
+    background: red;
+    transition: width 0.3s;
+    margin: 0 auto;
+}
+
+.navbar-nav .nav-link:hover::after {
+    width: 100%;
+}
+
+/* Mantener rojo en el link activo */
+.active-link::after {
+    width: 100%;
+}
+
+/* Fondo general del header */
+.custom-header {
+    background-color: #222;
+    /* negro/gris oscuro */
+}
+
+/* NAV LINKS estilo */
+.nav-link {
+    color: white !important;
+    font-weight: 500;
+    position: relative;
+    margin: 0 12px;
+    transition: color 0.3s;
+}
+
+/* Subrayado rojo animado debajo de cada link */
+.nav-link::after {
+    content: "";
+    display: block;
+    width: 0;
+    height: 3px;
+    background: red;
+    transition: width 0.3s;
+    margin: 0 auto;
+}
+
+.nav-link:hover::after {
+    width: 100%;
+}
+
+/* Mantener activo */
+.active-link::after {
+    width: 100%;
+}
+
+/* Ajustes visuales */
+.nav-link:hover {
+    color: #ff4d4d !important;
+    /* un rojo claro en hover */
+}
+
+/* Fondo general del header */
+.custom-header {
+    background-color: #222;
+}
+
+/* NAV LINKS estilo */
+.nav-link {
+    color: white !important;
+    font-weight: 500;
+    position: relative;
+    margin: 0 12px;
+    transition: color 0.3s;
+}
+
+/* Subrayado rojo animado debajo de cada link */
+.nav-link::after {
+    content: "";
+    display: block;
+    width: 0;
+    height: 3px;
+    background: red;
+    transition: width 0.3s;
+    margin: 0 auto;
+}
+
+.nav-link:hover::after {
+    width: 100%;
+}
+
+.active-link::after {
+    width: 100%;
+}
+
+/* Hover en texto */
+.nav-link:hover {
+    color: #ff4d4d !important;
+}
+
+/* Botón hamburguesa */
+.navbar-toggler {
+    background: transparent;
+}
+
+/* --- RESPONSIVE --- */
+@media (max-width: 991px) {
+
+    /* Los links pasan a columna en móviles */
+    #menuNav {
+        background-color: #222;
+        padding: 10px 0;
+    }
+
+    #menuNav ul {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    #menuNav ul .nav-link {
+        margin: 10px 0;
+    }
+
+    /* Ícono de usuario abajo de los links en móvil */
+    #menuNav a {
+        display: block;
+        text-align: center;
+        margin-top: 10px;
+    }
+}
+
+/* NAV */
+.custom-header {
+    background-color: #222;
+}
+
+.nav-link {
+    color: white !important;
+    font-weight: 500;
+    position: relative;
+    margin: 0 12px;
+}
+
+.nav-link::after {
+    content: "";
+    display: block;
+    width: 0;
+    height: 3px;
+    background: red;
+    transition: width 0.3s;
+    margin: 0 auto;
+}
+
+.nav-link:hover::after,
+.active-link::after {
+    width: 100%;
+}
+
+/* BENEFICIOS */
+.benefits {
+    background: #222;
+    color: white;
+}
+
+.benefits i {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+/* RESPONSIVE GLOBAL */
+@media (max-width: 991px) {
+
+    /* El nav completo en columna */
+    .navbar-nav {
+        flex-direction: column;
+    }
+
+    .nav-user {
+        display: block;
+        text-align: center;
+    }
+
+    /* Forzar beneficios en columna */
+    .benefits .row>div {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    /* Forzar descripción en columna */
+    .container .row {
+        text-align: center;
+    }
+
+    .container .row img {
+        margin-top: 20px;
+    }
+}
+
+#btn-enviar {
+    width: 334px;
+    margin-top: 10px;
 }

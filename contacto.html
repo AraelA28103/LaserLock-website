@@ -15,52 +15,50 @@
 <body>
     <!-- NAVBAR -->
 
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top shadow">
-        <div class="container-fluid d-flex justify-content-between">
-
-            <!-- LOGO -->
-            <a class="navbar-brand fw-bold" href="index.html">
-                <img src="static/images/logo.ico" alt="" width="80">
-                <img src="images/logo.ico" alt="" width="80px">LaserLock
+    <header class="custom-header">
+        <!-- Fila superior: Logo + Título + perfil al final -->
+        <div class="d-flex align-items-center justify-content-between px-3 py-2">
+            <div class="d-flex align-items-center">
+                <img src="images/logo.ico" alt="logo" width="40" class="me-2">
+                <span class="fw-bold text-white fs-5">LaserLock</span>
+            </div>
+            <a id="profile-link" class="d-flex align-items-center text-white">
+                <i class="bi bi-person-circle fs-4"></i>
+                <span id="profile-name" class="ms-2 d-none d-md-inline"></span>
             </a>
+        </div>
 
-            <!-- BOTÓN HAMBURGUESA -->
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <!-- Navbar responsive -->
+        <nav class="navbar navbar-expand-md navbar-dark bg-dark border-top border-secondary px-3">
+            <!-- Botón hamburguesa -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive"
+                aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
 
-            <!-- MENÚ -->
-            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+            <!-- Links del menú -->
+            <div class="collapse navbar-collapse justify-content-center" id="navbarResponsive">
                 <ul class="navbar-nav">
-                    <li class="nav-item"><a class="nav-link" href="index.html"><i class="bi bi-house"></i> Inicio</a>
-                    </li>
-                    <li class="nav-item"><a class="nav-link" href="https://araela28103.github.io/LaserLock-info/"><i
-                                class="bi bi-people"></i> Nosotros</a></li>
-                    <li class="nav-item"><a class="nav-link" href="distribuidores.html"><i class="bi bi-bag"></i>
-                            Distribuidores</a></li>
-                    <li class="nav-item"><a class="nav-link active" href="contacto.html"><i class="bi bi-phone"></i>
-                            Contacto</a></li>
-                    <li class="nav-item"><a class="nav-link" href="configuracion.html"><i class="bi bi-gear"></i>
-                            Configuración</a></li>
+                    <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Nosotros</a></li>
+                    <li class="nav-item"><a class="nav-link" href="distribuidores.html">Distribuidores</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Proyectos</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="contacto.html">Contacto</a></li>
                 </ul>
-                <a id="profile-link" href="configuracion.html" class="text-white ms-5 me-3 d-flex align-items-center">
-                    <i class="bi bi-person-circle fs-4"></i>
-                    <span id="profile-name" class="ms-2 d-none d-md-inline"></span>
-                </a>
-
             </div>
-
-        </div>
-    </nav>
-
+        </nav>
+    </header>
 
 
 
-    <div class="container col-md-6 mt-5" style="max-width: 800px;">
-        <h2 class="text-center">Contáctanos</h2>
-        <p class=" text-center">¿Quieres saber más sobre nuestros productos o conversar sobre un proyecto? Contactános y
-            nuestro equipo estará encantado de ayudarte a encontrar la mejor solución para ti. <strong>¡Hablemos hoy
-                mismo!</strong></p>
+
+
+    <div class="container col-md-9 mt-5 border border-dark border-opacity-50 rounded" style="max-width: 2000px;">
+        <h2 class="text-center mt-2 ">¿Interesado en distribuidores LaserLock?</h2>
+        <p class=" text-center mt-2 ">¿Buscas distribiur un producto de seguridad inovador, de alto margen y con un
+            diseño
+            ultrabajo? LaserLock ofrece una alarma láser de cobertura expandible y coste de fabricación radicalmente
+            eficiete. Una oportunidad única para partners visionarios. </p>
     </div>
 
     <img src="images/unnamed.jpg" alt="" class="text-center m-5 d-none d-md-block">
@@ -69,7 +67,9 @@
     <!-- CONTACTO -->
     <main class="mt-5 mb-5">
         <section class="container mt-5 b-black border border-dark rounded border-opacity-50 p-5">
-            <h3 class="text-danger">¡No dudes en contactarnos!</h3>
+            <h3 class="text pb-2">Escribénos</h3>
+            <p class="d-none d-sm-block pb-2">Únete a nuestro proyecto inovador. Completa el formulario y te contactamos
+                para explorar oportunidades de colaboración.</p>
             <form action="https://formspree.io/f/xanbglnv" method="POST">
                 <div class="row">
                     <div class="col-md-6 mb-2">
@@ -87,7 +87,8 @@
                 <input type="hidden" name="_autoresponse"
                     value="✅ Gracias por contactarnos, estaremos en contacto con usted.">
 
-                <button type="submit" class="btn btn-primary">Enviar</button>
+                <button id="btn-enviar" type="submit" class="btn btn-primary">Enviar</button>
+                <p class=""></p>
             </form>
 
 
